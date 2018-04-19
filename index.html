@@ -20,22 +20,22 @@
 	
 </head>
 
-  <body>
+  <body ng-app="IS219Gallery">
 	  
     <div class="header">
 	    
-      <div class="container">
+      <div class="container" ng-controller="HomeController">
         <h1 id="app_title">%title%</h1>
       </div>
       
     </div>
 
-    <div class="main">
+    <div class="main" ng-controller="HomeController">
       
       <div class="container">
 
         <div class="col-md-6"> 
-            <div class="thumbnail">
+            <div class="thumbnail" >
 
 					<img class="poster" />
 					<div class="imageInfo">%posterindex%</div>
