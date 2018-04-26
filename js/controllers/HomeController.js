@@ -88,7 +88,50 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
+	},
+      { 
+            title:      'A Quiet Place', 
+            iscore:     8.1,
+            rating:     'PG-13',
+            runtime:    90,
+            released:   new Date('2018', '04', '06'),
+            country:    'USA',
+            posters:    ['img/quiet1.jpg','img/quiet2.jpg'],
+            imdb:       'https://www.imdb.com/title/tt6644200',
+            website:    'https://www.facebook.com/AQuietPlaceMovie/',
+            likes:      254,
+            dislikes:   20,
+            posterindex: 0
+            },
+          { 
+            title:      'Avengers: Infinity War', 
+            iscore:     9.2,
+            rating:     'PG-13',
+            runtime:    149,
+            released:   new Date('2018', '04', '27'),
+            country:    'USA',
+            posters:    ['img/avenger1.jpg','img/avenger2.jpg'],
+            imdb:       'https://www.imdb.com/title/tt4154756',
+            website:    'https://www.facebook.com/avengers',
+            likes:      987,
+            dislikes:   245,
+            posterindex: 0
+            },
+          { 
+            title:      'Black Panther', 
+            iscore:     7.7,
+            rating:     'PG-13',
+            runtime:    134,
+            released:   new Date('2018', '02', '16'),
+            country:    'USA',
+            posters:    ['img/panther1.jpg', 'img/panther2.jpg'],
+            imdb:       'https://www.imdb.com/title/tt1825683',
+            website:    'https://www.facebook.com/BlackPantherMovie',
+            likes:      640,
+            dislikes:   202,
+            posterindex: 0
+            }
+
 	
 	
   ];
