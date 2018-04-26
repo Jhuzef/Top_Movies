@@ -115,6 +115,10 @@ body {
 .likes:hover {
     background-color: #9edd87;
     color: #008700;
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
 }
 .dislikes {
     cursor: pointer;
@@ -136,6 +140,10 @@ body {
 .dislikes:hover {
     background-color: #fdd6d6;
     color: #F65A5B;
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
 }
 
 /* This makes sure your Github Button is centered */
