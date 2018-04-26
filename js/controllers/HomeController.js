@@ -120,13 +120,11 @@ app.controller('HomeController', ['$scope', function($scope) {
 
       $scope.posterClick = function(index) {
 
-            if ( $scope.movies[index].posterindex == $scope.movies[index].posters.length - 1) {
+            if ( $scope.movies[index].posterindex == $scope.movies[index].posters.length-1) {
                   $scope.movies[index].posterindex = 0;
             }
             else {
                   $scope.movies[index].posterindex += 1;
-                  console.log($scope.movies[index].posters.length - 1);
-                  console.log(index);
             }
             
       };
