@@ -34,21 +34,21 @@
       
       <div class="container">
 
-        <div class="col-md-6"> 
+        <div class="col-md-6" ng-repeat="movie in movies"> 
             <div class="thumbnail" >
 
-					<img class="poster" />
-					<div class="imageInfo">%posterindex%</div>
+					<img class="poster" ng-click='posterClick($index)'  ng-src="{{ movie.posters[ movie.posterindex ] }}"/>
+					<div class="imageInfo">{{ movie.posterIndex }}</div>
 					
-					<p class="title">%title% (%country%)</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> %iscore% </p>
-					<p class="runtime">Runtime: %runtime%</p> 
-					<p class="released">Released: %released% | Rated: %rating%</p>
-					<p class="websites">Websites: <a>%imdb%</a> | <a>%website%</a></p>
+					<p class="title">{{ movie.title }} ({{ movie.country }})</p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
+					<p class="runtime">Runtime: {{ movies[0].runtime }}</p> 
+					<p class="released">Released: {{ movie.released | date }} | Rated: {{ movie.rating }}</p>
+					<p class="websites">Websites: <a ng-href = "{{ movie.imdb }}">IMDB</a> | <a ng-href="{{ movie.website }}">Official</a></p>
 					
 		            <div class="social">
-		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> %like%</p>
-		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> %dislike%</p>
+		              <p class="likes" ng-click='like($index)'><i class="fa fa-thumbs-up" aria-hidden="true" >{{ movie.likes }}</i></p>
+		              <p class="dislikes" ng-click='dislike($index)'><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ movie.dislikes }}</p>
 		            </div>
             </div> 
         </div>
@@ -58,7 +58,7 @@
 
     <div class="footer" ng-controller="HomeController">
       <div class="container">
-		<a id="github" class="btn btn-lg btn-warning" href ="{{ github }}">
+		<a id="github" class="btn btn-lg btn-warning" ng-href ="{{ github }}">
 			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"> {{ owner }}</i> 
   		</a>
       </div>
